@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Clock</title>
+    <style>
+      body {
+        height: 100vh;
+        box-sizing: border-box;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        width: auto;
+        height: auto;
+        border: 10px solid black;
+        padding: 20px 15px;
+        animation: borderchange 3s infinite linear;
+
+        background: rgba(223, 220, 220, 0.685); 
+        backdrop-filter: blur(500px); 
+        box-shadow: 0 4px 6px rgba(3, 3, 3, 0.253) 
+      }
+      span {
+        font-size: 60px;
+      }
+      @keyframes borderchange {
+        0%,
+        100% {
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+          border-left-color: aqua;
+          border-top-color: rgb(9, 255, 0);
+          border-right-color: rgb(247, 0, 255);
+          border-bottom-color: rgb(255, 217, 0);
+        }
+        25% {
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+          border-left-color: rgb(255, 217, 0);
+          border-top-color: aqua;
+          border-right-color: rgb(9, 255, 0);
+          border-bottom-color: rgb(247, 0, 255);
+        }
+        50% {
+          border-top-left-radius: 40px;
+          border-top-right-radius: 40px;
+          border-bottom-left-radius: 40px;
+          border-bottom-right-radius: 40px;
+          border-left-color: rgb(247, 0, 255);
+          border-top-color: rgb(255, 217, 0);
+          border-right-color: aqua;
+          border-bottom-color: rgb(9, 255, 0);
+        }
+        75% {
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+          border-left-color: aqua;
+          border-top-color: rgb(9, 255, 0);
+          border-right-color: rgb(247, 0, 255);
+          border-bottom-color: rgb(255, 217, 0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <span id="hours">00</span>
+      <span>:</span>
+      <span id="mins">00</span>
+      <span>:</span>
+      <span id="secound">00</span>
+      <span>:</span>
+      <span id="ampm">AM</span>
+    </div>
+    <script src="/js projects/clock.js"></script>
+  </body>
+</html>
