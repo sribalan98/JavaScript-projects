@@ -92,4 +92,21 @@ function ae() {
      a8 = 5; // Assignment to constant variable.
     // console.log(a8) 
 }
-ae()
+//ae()
+
+//* example 2
+//* Users cannot change the properties of the const object, but they can change the value of the properties of the const object.
+
+const money = {
+    paper1 : 10,
+    paper2 : 20
+}
+// It is allowed
+money.paper1 = 50
+
+// It is not allowed
+// money = { // Uncaught SyntaxError:Unexpected identifier
+//     paper1: 10,
+//     paper2: 9
+// }
+console.log(money)
