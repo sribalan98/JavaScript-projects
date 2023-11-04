@@ -1,0 +1,72 @@
+body {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.iphone-frame {
+    position: relative;
+    width: 375px; /* Adjust the width as needed */
+    height: 667px; /* Adjust the height as needed */
+    background: #f4f4f4; /* iPhone frame color */
+    border: 16px solid #000; /* iPhone frame border color */
+    border-radius: 36px; /* iPhone frame border radius */
+    overflow: hidden;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 10px;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+    color: #fff;
+}
+
+.joketype,
+.jokeline,
+.punchline {
+    margin: 20px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    overflow: hidden;
+}
+.jokeline {
+    margin: 20px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    overflow: hidden;
+    min-height: 100px; /* Adjust the minimum height as needed */
+    display: flex;
+    align-items: center;
+}
+.gen-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.gen-button:hover {
+    background: #0364ca;
+    color: #fff;
+}
