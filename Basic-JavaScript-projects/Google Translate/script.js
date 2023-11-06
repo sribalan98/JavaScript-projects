@@ -17,7 +17,7 @@ async function googleT() {
     headers: {
       "content-type": "application/x-www-form-urlencoded",
       "Accept-Encoding": "application/gzip",
-      "X-RapidAPI-Key": "5037b0805fmshec9db43afb212edp1f8fcejsn66e4b26d76db",
+      "X-RapidAPI-Key": "put your API key here",
       "X-RapidAPI-Host": "google-translate1.p.rapidapi.com",
     },
     body: new URLSearchParams({
