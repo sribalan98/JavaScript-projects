@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form data</title>
+    <link rel="stylesheet" href="/discord-formMsg/dist/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body class="h-screen w-screen bg-violet-600 flex justify-center">
+    <div class="w-[40%] h-fit mt-3 bg-white rounded border-x-2 border-y-2">
+      <!-- <div class="w-auto h-2 bg-gray-500"></div> -->
+      <h1 class="font-semibold text-3xl text-gray-800 pl-3 mt-3">Feedback</h1>
+      <p class="font-semibold text-lg text-gray-800 pl-3">
+        send this feedback message to Sribalan.
+      </p>
+
+      <form
+        id="form"
+        class="flex flex-col justify-center bg-white p-2"
+        method="post"
+      >
+        <label for="name" class="text-gray-500 my-1"
+          >Name: <i class="fa-solid fa-signature"></i>
+        </label>
+        <input
+          type="text"
+          placeholder="Your Name"
+          class="p-1 outline-none my-1 border-b-4 focus:border-gray-500"
+          id="name"
+        />
+        <label for="email" class="text-gray-500 my-1"
+          >Email: <i class="fa-solid fa-envelope"></i>
+        </label>
+        <input
+          type="text"
+          placeholder="Enter Your Email Address"
+          class="p-1 outline-none ring-blue-500 ring-offset-1 my-1 border-b-4 focus:border-gray-500 transition"
+          id="email"
+        />
+        <label for="subject" class="text-gray-500 my-1"
+          >Subject: <i class="fa-solid fa-pen-nib"></i>
+        </label>
+        <input
+          type="text"
+          placeholder="Subject Heading"
+          class="p-1 outline-none ring-blue-500 ring-offset-1 my-1 border-b-4 focus:border-gray-500"
+          id="subject"
+        />
+        <div id="alertDiv" class="text-center mt-2 mb-2 hidden cursor-pointer">
+          <span
+            id="alertMsg"
+            class="bg-red-200 py-1 px-2 text-red-700 border-2 rounded-[10px] border-red-500"
+            >msg</span
+          >
+        </div>
+        <textarea
+          name="message area"
+          id="message"
+          rows="3"
+          placeholder="Write your Message Here !"
+          class="p-1 outline-none ring-blue-500 ring-offset-1 my-1 border-4 focus:border-gray-500"
+        ></textarea>
+        <button
+          type="button"
+          id="btn-form"
+          class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl active:-translate-x-1 active:translate-y-1 active:duration-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 self-center mt-2"
+        >
+          Send
+        </button>
+      </form>
+    </div>
+    <script src="./formApp.js"></script>
+  </body>
+</html>

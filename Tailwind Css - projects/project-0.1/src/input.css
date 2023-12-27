@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ! to apply a font to inside html */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    font-family: "Roboto Mono", "Roboto";
+  }
+}
+
+@layer components {
+  .website-button {
+    @apply bg-slate-500 flex items-center gap-3 w-full pl-5 pr-5 pt-2 pb-2 rounded text-white hover:bg-slate-600;
+  }
+}
