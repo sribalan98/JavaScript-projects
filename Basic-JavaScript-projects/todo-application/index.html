@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo application</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <div class="editbar">
+        <div class="edit-input-div">
+          <label for="edit-title">Edit Title</label>
+          <input
+            type="text"
+            id="edit-title"
+            class="edit-title"
+            placeholder="Enter Title"
+          />
+          <label for="edit-description">Edit Discription</label>
+          <textarea
+            name=""
+            class="edit-description"
+            id="edit-description"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <button id="edit-add">Add</button>
+        </div>
+      </div>
+      <header class="header">
+        <h1>Simple Todo Web Application</h1>
+      </header>
+      <aside class="sidebar">
+        <div class="input-div">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            id="title"
+            class="title"
+            placeholder="Enter Title"
+          />
+          <label for="description">Discription</label>
+          <textarea
+            name=""
+            class="description"
+            id="description"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <button id="add">Add</button>
+        </div>
+      </aside>
+      <main id="main" class="main"></main>
+      <footer class="footer">
+        <h1>Simple Todo Web Application</h1>
+      </footer>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

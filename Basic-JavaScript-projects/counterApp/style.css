@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Kanit;
+  -webkit-user-select: none;
   user-select: none;
 }
 body {
@@ -48,36 +49,31 @@ hr {
   width: 100%;
 }
 .decrement {
-    background-color: lightcoral;
-    border: none;
-    border-radius: 8%;
-    cursor: pointer;
-  }
-  
+  background-color: lightcoral;
+  border: none;
+  border-radius: 8%;
+  cursor: pointer;
+}
 
-  
-  .reset {
-    background-color: rgb(128, 199, 240);
-    border: none;
-    border-radius: 8%;
-    cursor: pointer;
-  }
-  
+.reset {
+  background-color: rgb(128, 199, 240);
+  border: none;
+  border-radius: 8%;
+  cursor: pointer;
+}
 
-  .increment {
-    background-color: rgb(128, 240, 133);
-    border: none;
-    border-radius: 8%;
-    cursor: pointer;
-  }
-  
+.increment {
+  background-color: rgb(128, 240, 133);
+  border: none;
+  border-radius: 8%;
+  cursor: pointer;
+}
 
-  .decrement:active,
-  .reset:active,
-  .increment:active {
-    transform: translateY(2px);
-  }
-  
+.decrement:active,
+.reset:active,
+.increment:active {
+  transform: translateY(2px);
+}
 
 .app-name {
   text-decoration: underline;
