@@ -2,10 +2,7 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 const express = require("express");
 const routes = require("./routes/routes.js");
-const UserName = encodeURIComponent("Sribalan");
-const Password = encodeURIComponent("Sri@Sriyo");
-const CollectionDB = `movies`;
-const DATABASE_URL = `mongodb+srv://${UserName}:${Password}@tamilmovies.fbou2rc.mongodb.net/${CollectionDB}`;
+const DATABASE_URL = `Mongo Db Api selected`;
 
 const app = express();
 app.use(express.json());
