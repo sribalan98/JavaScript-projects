@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zomato</title>
+  </head>
+  <body>
+    <!-- <div id="app"></div> -->
+    <div class="w-full h-[100vh]">
+      <nav id="nav1" class="bg-slate-900 w-full h-[10vh] flex">
+        <div class="w-full h-full flex justify-start pl-[2.5rem] items-center">
+          <h3c class="font-robotmono font-bold text-[32px] text-red-500"
+            ><a href="#">Zomato</a></h3c
+          >
+        </div>
+        <div class="w-full h-full flex justify-end items-center pr-6 gap-3">
+          <input
+            type="text"
+            placeholder="Search Foods"
+            class="input input-bordered w-full max-w-xs"
+          />
+          <button
+            class="btn bg-red-500 hover:bg-red-700 text-white font-roboto text-[1rem]"
+          >
+            Search
+          </button>
+        </div>
+      </nav>
+      <section id="section1" class="w-full h-[auto] px-5 py-[2rem]">
+        <!--  -->
+        <div class="carousel w-full h-auto">
+          <div
+            id="item1"
+            class="carousel-item w-full h-[500px] flex justify-center items-center"
+          >
+            <img
+              src="./imgs/1.jpg"
+              class="w-auto bg-cover bg-center rounded-[1rem]"
+            />
+          </div>
+          <div
+            id="item2"
+            class="carousel-item w-full h-[500px] flex justify-center items-center"
+          >
+            <img
+              src="./imgs/2.jpg"
+              class="w-auto bg-cover bg-center rounded-[1rem]"
+            />
+          </div>
+          <div
+            id="item3"
+            class="carousel-item w-full h-[500px] flex justify-center items-center"
+          >
+            <img
+              src="./imgs/3.jpg"
+              class="w-auto bg-cover bg-center rounded-[1rem]"
+            />
+          </div>
+          <div
+            id="item4"
+            class="carousel-item w-full h-[500px] flex justify-center items-center"
+          >
+            <img
+              src="./imgs/4.jpg"
+              class="w-auto bg-cover bg-center rounded-[1rem]"
+            />
+          </div>
+        </div>
+        <div class="flex justify-center w-full gap-2">
+          <a href="#item1" class="btn btn-xs">1</a>
+          <a href="#item2" class="btn btn-xs">2</a>
+          <a href="#item3" class="btn btn-xs">3</a>
+          <a href="#item4" class="btn btn-xs">4</a>
+        </div>
+
+        <!-- section one banners -->
+      </section>
+      <section
+        id="section2"
+        class="w-full h-auto flex justify-center items-center"
+      >
+        <!-- online foods in div -->
+        <div
+          class="w-full h-auto px-5 py-5 flex justify-center items-center flex-wrap gap-3"
+        >
+          <!-- all cards -->
+          <!-- card 1 -->
+          <div
+            class="w-[20rem] h-auto bg-slate-700 rounded-tl-[20px] rounded-tr-[20px]"
+          >
+            <figure
+              class="w-full h-[70%] bg-slate-50 rounded-tl-[20px] rounded-tr-[20px]"
+            >
+              <img
+                class="w-full h-full bg-cover bg-center rounded-tl-[20px] rounded-tr-[20px]"
+                src="./imgs/foods/1.png"
+                alt="biriyani"
+              />
+            </figure>
+            <div class="w-full h-auto flex justify-around">
+              <div class="px-5 pt-2 text-start">
+                <h3 class="font-bold">Biriyani</h3>
+                <p class=""><b>₹</b> 200</p>
+                <p class="">Rating: ⭐⭐⭐⭐</p>
+              </div>
+              <div class="flex justify-center items-center w-auto h-auto">
+                <button class="btn btn-success text-white font-semibold">
+                  Buy
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 1 -->
+          <!-- card 2 -->
+          <div
+            class="w-[20rem] h-auto bg-slate-700 rounded-tl-[20px] rounded-tr-[20px]"
+          >
+            <figure
+              class="w-full h-[70%] bg-slate-50 rounded-tl-[20px] rounded-tr-[20px]"
+            >
+              <img
+                class="w-full h-full bg-cover bg-center rounded-tl-[20px] rounded-tr-[20px]"
+                src="./imgs/foods/2.png"
+                alt="biriyani"
+              />
+            </figure>
+            <div class="w-full h-auto flex justify-around">
+              <div class="px-5 pt-2 text-start">
+                <h3 class="font-bold">Idli</h3>
+                <p class=""><b>₹</b> 150</p>
+                <p class="">Rating: ⭐⭐⭐⭐⭐</p>
+              </div>
+              <div class="flex justify-center items-center w-auto h-auto">
+                <button class="btn btn-success text-white font-semibold">
+                  Buy
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <!-- card 3 -->
+          <div
+            class="w-[20rem] h-auto bg-slate-700 rounded-tl-[20px] rounded-tr-[20px]"
+          >
+            <figure
+              class="w-full h-[70%] bg-slate-50 rounded-tl-[20px] rounded-tr-[20px]"
+            >
+              <img
+                class="w-full h-full bg-cover bg-center rounded-tl-[20px] rounded-tr-[20px]"
+                src="./imgs/foods/3.png"
+                alt="biriyani"
+              />
+            </figure>
+            <div class="w-full h-auto flex justify-around">
+              <div class="px-5 pt-2 text-start">
+                <h3 class="font-bold">Dosa</h3>
+                <p class=""><b>₹</b> 80</p>
+                <p class="">Rating: ⭐⭐</p>
+              </div>
+              <div class="flex justify-center items-center w-auto h-auto">
+                <button class="btn btn-success text-white font-semibold">
+                  Buy
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <!-- card 4 -->
+          <div
+            class="w-[20rem] h-auto bg-slate-700 rounded-tl-[20px] rounded-tr-[20px]"
+          >
+            <figure
+              class="w-full h-[70%] bg-slate-50 rounded-tl-[20px] rounded-tr-[20px]"
+            >
+              <img
+                class="w-full h-full bg-cover bg-center rounded-tl-[20px] rounded-tr-[20px]"
+                src="./imgs/foods/4.png"
+                alt="biriyani"
+              />
+            </figure>
+            <div class="w-full h-auto flex justify-around">
+              <div class="px-5 pt-2 text-start">
+                <h3 class="font-bold">Samosa</h3>
+                <p class=""><b>₹</b> 40</p>
+                <p class="">Rating: ⭐⭐⭐</p>
+              </div>
+              <div class="flex justify-center items-center w-auto h-auto">
+                <button class="btn btn-success text-white font-semibold">
+                  Buy
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 4 -->
+          <!-- card 5 -->
+          <div
+            class="w-[20rem] h-auto bg-slate-700 rounded-tl-[20px] rounded-tr-[20px]"
+          >
+            <figure
+              class="w-full h-[70%] bg-slate-50 rounded-tl-[20px] rounded-tr-[20px]"
+            >
+              <img
+                class="w-full h-full bg-cover bg-center rounded-tl-[20px] rounded-tr-[20px]"
+                src="./imgs/foods/5.png"
+                alt="biriyani"
+              />
+            </figure>
+            <div class="w-full h-auto flex justify-around">
+              <div class="px-5 pt-2 text-start">
+                <h3 class="font-bold">Sandwich</h3>
+                <p class=""><b>₹</b> 120</p>
+                <p class="">Rating: ⭐⭐⭐⭐⭐</p>
+              </div>
+              <div class="flex justify-center items-center w-auto h-auto">
+                <button class="btn btn-success text-white font-semibold">
+                  Buy
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 5 -->
+          <!-- card 6 -->
+          <div
+            class="w-[20rem] h-auto bg-slate-700 rounded-tl-[20px] rounded-tr-[20px]"
+          >
+            <figure
+              class="w-full h-[70%] bg-slate-50 rounded-tl-[20px] rounded-tr-[20px]"
+            >
+              <img
+                class="w-full h-full bg-cover bg-center rounded-tl-[20px] rounded-tr-[20px]"
+                src="./imgs/foods/6.png"
+                alt="biriyani"
+              />
+            </figure>
+            <div class="w-full h-auto flex justify-around">
+              <div class="px-5 pt-2 text-start">
+                <h3 class="font-bold">Indian Thali</h3>
+                <p class=""><b>₹</b> 350</p>
+                <p class="">Rating: ⭐⭐⭐⭐⭐</p>
+              </div>
+              <div class="flex justify-center items-center w-auto h-auto">
+                <button class="btn btn-success text-white font-semibold">
+                  Buy
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 6 -->
+          <!-- card 7 -->
+          <div
+            class="w-[20rem] h-auto bg-slate-700 rounded-tl-[20px] rounded-tr-[20px]"
+          >
+            <figure
+              class="w-full h-[70%] bg-slate-50 rounded-tl-[20px] rounded-tr-[20px]"
+            >
+              <img
+                class="w-full h-full bg-cover bg-center rounded-tl-[20px] rounded-tr-[20px]"
+                src="./imgs/foods/7.png"
+                alt="biriyani"
+              />
+            </figure>
+            <div class="w-full h-auto flex justify-around">
+              <div class="px-5 pt-2 text-start">
+                <h3 class="font-bold">Taco</h3>
+                <p class=""><b>₹</b> 240</p>
+                <p class="">Rating: ⭐⭐⭐⭐</p>
+              </div>
+              <div class="flex justify-center items-center w-auto h-auto">
+                <button class="btn btn-success text-white font-semibold">
+                  Buy
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 7 -->
+          <!-- card 8 -->
+          <div
+            class="w-[20rem] h-auto bg-slate-700 rounded-tl-[20px] rounded-tr-[20px]"
+          >
+            <figure
+              class="w-full h-[70%] bg-slate-50 rounded-tl-[20px] rounded-tr-[20px]"
+            >
+              <img
+                class="w-full h-full bg-cover bg-center rounded-tl-[20px] rounded-tr-[20px]"
+                src="./imgs/foods/8.png"
+                alt="biriyani"
+              />
+            </figure>
+            <div class="w-full h-auto flex justify-around">
+              <div class="px-5 pt-2 text-start">
+                <h3 class="font-bold">Shawarma</h3>
+                <p class=""><b>₹</b> 99</p>
+                <p class="">Rating: ⭐⭐⭐⭐⭐</p>
+              </div>
+              <div class="flex justify-center items-center w-auto h-auto">
+                <button class="btn btn-success text-white font-semibold">
+                  Buy
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 8 -->
+          <!-- card 9 -->
+          <div
+            class="w-[20rem] h-auto bg-slate-700 rounded-tl-[20px] rounded-tr-[20px]"
+          >
+            <figure
+              class="w-full h-[70%] bg-slate-50 rounded-tl-[20px] rounded-tr-[20px]"
+            >
+              <img
+                class="w-full h-full bg-cover bg-center rounded-tl-[20px] rounded-tr-[20px]"
+                src="./imgs/foods/9.png"
+                alt="biriyani"
+              />
+            </figure>
+            <div class="w-full h-auto flex justify-around">
+              <div class="px-5 pt-2 text-start">
+                <h3 class="font-bold">Chicken65</h3>
+                <p class=""><b>₹</b> 350</p>
+                <p class="">Rating: ⭐⭐⭐⭐</p>
+              </div>
+              <div class="flex justify-center items-center w-auto h-auto">
+                <button class="btn btn-success text-white font-semibold">
+                  Buy
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 9 -->
+          <!-- card 10 -->
+          <div
+            class="w-[20rem] h-auto bg-slate-700 rounded-tl-[20px] rounded-tr-[20px]"
+          >
+            <figure
+              class="w-full h-[70%] bg-slate-50 rounded-tl-[20px] rounded-tr-[20px]"
+            >
+              <img
+                class="w-full h-full bg-cover bg-center rounded-tl-[20px] rounded-tr-[20px]"
+                src="./imgs/foods/10.png"
+                alt="biriyani"
+              />
+            </figure>
+            <div class="w-full h-auto flex justify-around">
+              <div class="px-5 pt-2 text-start">
+                <h3 class="font-bold">Chicken Nan</h3>
+                <p class=""><b>₹</b> 220</p>
+                <p class="">Rating: ⭐⭐⭐</p>
+              </div>
+              <div class="flex justify-center items-center w-auto h-auto">
+                <button class="btn btn-success text-white font-semibold">
+                  Buy
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 10 -->
+          <!-- card 11 -->
+          <div
+            class="w-[20rem] h-auto bg-slate-700 rounded-tl-[20px] rounded-tr-[20px]"
+          >
+            <figure
+              class="w-full h-[70%] bg-slate-50 rounded-tl-[20px] rounded-tr-[20px]"
+            >
+              <img
+                class="w-full h-full bg-cover bg-center rounded-tl-[20px] rounded-tr-[20px]"
+                src="./imgs/foods/11.png"
+                alt="biriyani"
+              />
+            </figure>
+            <div class="w-full h-auto flex justify-around">
+              <div class="px-5 pt-2 text-start">
+                <h3 class="font-bold">Chicken Gravy</h3>
+                <p class=""><b>₹</b> 410</p>
+                <p class="">Rating: ⭐⭐⭐⭐</p>
+              </div>
+              <div class="flex justify-center items-center w-auto h-auto">
+                <button class="btn btn-success text-white font-semibold">
+                  Buy
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 11-->
+          <!-- card 12 -->
+          <div
+            class="w-[20rem] h-auto bg-slate-700 rounded-tl-[20px] rounded-tr-[20px]"
+          >
+            <figure
+              class="w-full h-[70%] bg-slate-50 rounded-tl-[20px] rounded-tr-[20px]"
+            >
+              <img
+                class="w-full h-full bg-cover bg-center rounded-tl-[20px] rounded-tr-[20px]"
+                src="./imgs/foods/12.png"
+                alt="biriyani"
+              />
+            </figure>
+            <div class="w-full h-auto flex justify-around">
+              <div class="px-5 pt-2 text-start">
+                <h3 class="font-bold">Chicken Girll</h3>
+                <p class=""><b>₹</b> 650</p>
+                <p class="">Rating: ⭐⭐⭐⭐</p>
+              </div>
+              <div class="flex justify-center items-center w-auto h-auto">
+                <button class="btn btn-success text-white font-semibold">
+                  Buy
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 12 -->
+          <!-- card 13 -->
+          <div
+            class="w-[20rem] h-auto bg-slate-700 rounded-tl-[20px] rounded-tr-[20px]"
+          >
+            <figure
+              class="w-full h-[70%] bg-slate-50 rounded-tl-[20px] rounded-tr-[20px]"
+            >
+              <img
+                class="w-full h-full bg-cover bg-center rounded-tl-[20px] rounded-tr-[20px]"
+                src="./imgs/foods/13.png"
+                alt="biriyani"
+              />
+            </figure>
+            <div class="w-full h-auto flex justify-around">
+              <div class="px-5 pt-2 text-start">
+                <h3 class="font-bold">Chapathy</h3>
+                <p class=""><b>₹</b> 120</p>
+                <p class="">Rating: ⭐⭐⭐⭐</p>
+              </div>
+              <div class="flex justify-center items-center w-auto h-auto">
+                <button class="btn btn-success text-white font-semibold">
+                  Buy
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 13 -->
+          <!-- all cards -->
+        </div>
+      </section>
+      <footer class="footer footer-center p-4 bg-base-300 text-base-content">
+        <aside>
+          <p>Copyright © 2024 - All right reserved by Zomato Industries Ltd</p>
+        </aside>
+      </footer>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
