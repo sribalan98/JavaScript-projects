@@ -1,5 +1,14 @@
 import PropTypes from "prop-types";
-const AdminPostInput = ({ label, type, id, placeholder, resgister }) => {
+const AdminPostInput = ({
+  label,
+  type,
+  id,
+  placeholder,
+  name,
+  errors,
+  register,
+  validation,
+}) => {
   return (
     <div className="flex flex-col w-full gap-2">
       <div className="flex justify-between">
@@ -12,8 +21,10 @@ const AdminPostInput = ({ label, type, id, placeholder, resgister }) => {
         type={type}
         className="w-full p-5 font-medium border rounded-md border-slate-300 placeholder:opacity-60"
         placeholder={placeholder}
-        {...resgister}
+        name={name}
+        {...register(id, validation)}
       />
+      {errors && <span className="text-red-600">{errors.message}</span>}
     </div>
   );
 };
@@ -25,6 +36,9 @@ AdminPostInput.propTypes = {
   type: PropTypes.string,
   id: PropTypes.string,
   placeholder: PropTypes.string,
+  name: PropTypes.string,
   value: PropTypes.string,
-  // error: PropTypes.object,
+  register: PropTypes.func,
+  validation: PropTypes.object,
+  errors: PropTypes.object,
 };
