@@ -5,7 +5,7 @@ const AdminPostPage = () => {
   const {
     register,
     handleSubmit,
-    SetError,
+    setError,
     formState: { errors },
   } = useForm();
   // register,
@@ -24,24 +24,30 @@ const AdminPostPage = () => {
       />
     );
   });
-  // const onSubmit = (data) => {
-  //   if (!isNaN(data.Duration)) {
-  //     console.log(data);
-  //     console.log(data.Duration);
-  //   }
-  // };
+
   const onSubmit = (data) => {
-    // Define a regular expression pattern for numbers and colons only
     const validDurationPattern = /^[0-9:]+$/;
 
-    // Check if the Duration matches the desired pattern
     if (validDurationPattern.test(data.Duration)) {
-      console.log("Valid duration format");
-      console.log(data);
-      console.log(data.Duration);
+      const RecivedData = {
+        CountryofOrigin: data.CountryofOrigin,
+        Director: data.Director,
+        Discription: data.Discription,
+        Duration: data.Duration,
+        Genre: data.Genre,
+        Language: data.Language,
+        MoviePosters: data.MoviePosters,
+        NativeLanguage: data.NativeLanguage,
+        PlotSummary: data.PlotSummary,
+        ReleaseDate: data.ReleaseDate,
+        StreamingPlatforms: data.StreamingPlatforms,
+        Tittle: data.Tittle,
+      };
     } else {
-      console.log("Invalid duration format");
-      SetError;
+      setError("Duration", {
+        type: "manual",
+        message: "Invalid duration format",
+      });
     }
   };
   return (
