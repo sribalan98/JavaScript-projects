@@ -5,7 +5,12 @@ export default {
     fontFamily: {
       protestRevolution: ["Protest Revolution"],
     },
-    extend: {},
+    extend: {
+      colors: {
+        "dark-blue": "#0c115f",
+        "hightlight-yellow": " #feff4b",
+      },
+    },
   },
   plugins: [],
 };

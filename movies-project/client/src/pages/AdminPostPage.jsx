@@ -5,7 +5,6 @@ const AdminPostPage = () => {
   const {
     register,
     handleSubmit,
-    setError,
     formState: { errors },
   } = useForm();
   // register,
@@ -25,31 +24,22 @@ const AdminPostPage = () => {
     );
   });
 
-  const onSubmit = (data) => {
-    const validDurationPattern = /^[0-9:]+$/;
+  const splitAndTrim = (str) => str.split(",").map((item) => item.trim());
 
-    if (validDurationPattern.test(data.Duration)) {
-      const RecivedData = {
-        CountryofOrigin: data.CountryofOrigin,
-        Director: data.Director,
-        Discription: data.Discription,
-        Duration: data.Duration,
-        Genre: data.Genre,
-        Language: data.Language,
-        MoviePosters: data.MoviePosters,
-        NativeLanguage: data.NativeLanguage,
-        PlotSummary: data.PlotSummary,
-        ReleaseDate: data.ReleaseDate,
-        StreamingPlatforms: data.StreamingPlatforms,
-        Tittle: data.Tittle,
-      };
-    } else {
-      setError("Duration", {
-        type: "manual",
-        message: "Invalid duration format",
-      });
-    }
+  const onSubmit = (data) => {
+    const RecivedData = {
+      Tittle: data.Tittle,
+      Genre: splitAndTrim(data.Genre),
+      Discription: data.Discription,
+      Language: splitAndTrim(data.Language),
+      Director: splitAndTrim(data.Director),
+      MoviePosters: data.MoviePosters,
+      StreamingPlatforms: splitAndTrim(data.StreamingPlatforms),
+    };
+
+    console.log(RecivedData);
   };
+
   return (
     <div className="bg-slate-800 min-h-screen flex items-center flex-col justify-center">
       <h1 className="text-4xl font-semibold text-white font-protestRevolution">

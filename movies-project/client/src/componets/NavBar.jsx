@@ -1,12 +1,12 @@
 import movieland from "../assets/movieland.png";
-
+import { BsFillSearchHeartFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 const NavBar = (props) => {
-  const { NC, LC, HLC, ISV } = props;
+  const { NC } = props;
   return (
     <>
-      <nav className="w-full h-[5rem] bg-blue-400 flex items-center justify-between sticky top-0">
+      <nav className="w-full h-[5rem] bg-dark-blue flex items-center justify-between sticky top-0">
         <div
           id="Logo-Container"
           className="w-20 h-full ml-8 flex items-center gap-4"
@@ -16,22 +16,25 @@ const NavBar = (props) => {
             MovieLand
           </h3>
         </div>
-        <ul className="flex gap-6 mr-5">
+        <ul className="flex gap-6 mr-5 justify-center items-center">
           <li>
             <Link className={NC} to="/">
               Home
             </Link>
           </li>
           <li>
-            <Link className={NC}>Blogs</Link>
+            <div className="flex justify-center items-center">
+              <input
+                type="text"
+                className="h-8 outline-none px-2 font-semibold"
+              />
+              <button className="bg-hightlight-yellow text-dark-blue rounded-tr-lg rounded-br-lg px-4 py-2  ">
+                <BsFillSearchHeartFill />
+              </button>
+            </div>
           </li>
           <li>
-            <Link className={NC}>Contact</Link>
-          </li>
-          <li>
-            <Link className={LC} to="/login" onClick={HLC}>
-              {ISV ? "Logout" : "Login"}
-            </Link>
+            <Link className={NC}>Support</Link>
           </li>
         </ul>
       </nav>

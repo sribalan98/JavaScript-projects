@@ -7,32 +7,13 @@ const inputFields = [
     validation: { required: "Field is required" },
   },
   {
-    id: "ReleaseDate",
-    label: "ReleaseDate",
-    type: "date",
-    validation: { required: "Field is required" },
-  },
-  {
-    id: "Duration",
-    label: "Duration",
-    type: "text",
-    placeholder: "hh.mm.ss",
-    validation: { required: "Field is required" },
-  },
-  {
     id: "Genre",
     label: "Genre",
     type: "text",
     placeholder: "Drama,Horror,Fantasy...ect",
     validation: { required: "Field is required" },
   },
-  {
-    id: "PlotSummary",
-    label: "PlotSummary",
-    type: "text",
-    placeholder: "Plot Storie",
-    validation: { required: "Field is required" },
-  },
+
   {
     id: "Discription",
     label: "Discription",
@@ -47,20 +28,7 @@ const inputFields = [
     placeholder: "MovieLanguage",
     validation: { required: "Field is required" },
   },
-  {
-    id: "CountryofOrigin",
-    label: "CountryofOrigin",
-    type: "text",
-    placeholder: "USA,IN,US...",
-    validation: { required: "Field is required" },
-  },
-  {
-    id: "NativeLanguage",
-    label: "NativeLanguage",
-    type: "text",
-    placeholder: "English,Hindi,Tamil...",
-    validation: { required: "Field is required" },
-  },
+
   {
     id: "StreamingPlatforms",
     label: "StreamingPlatforms",
