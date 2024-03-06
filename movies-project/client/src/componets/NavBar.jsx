@@ -9,7 +9,7 @@ const NavBar = (props) => {
       <nav className="w-full h-[5rem] bg-dark-blue flex items-center justify-between sticky top-0">
         <div
           id="Logo-Container"
-          className="w-20 h-full ml-8 flex items-center gap-4"
+          className="w-20 h-full ml-8 flex items-center gap-4 "
         >
           <img src={movieland} alt="MovieLand" />
           <h3 className="text-4xl font-semibold text-white font-protestRevolution ">
