@@ -6,8 +6,8 @@ const AdminPostPage = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
-  // register,
   const renderedInputs = inputFields.map((value, index) => {
     return (
       <AdminPostInput
@@ -44,6 +44,7 @@ const AdminPostPage = () => {
 
       const result = await response.json();
       console.log(result);
+      reset();
     } catch (error) {
       console.error("Error posting data:", error);
     }
@@ -61,7 +62,7 @@ const AdminPostPage = () => {
       StreamingPlatforms: splitAndTrim(data.StreamingPlatforms),
     };
     PostData(RecivedData);
-    console.log(RecivedData);
+    // console.log(RecivedData);
   };
 
   return (

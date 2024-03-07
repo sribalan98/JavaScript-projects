@@ -38,7 +38,7 @@ router.post("/postmovie", async (req, res) => {
       MoviePosters,
     });
     const dataToSave = await data.save();
-    res.status(201).json(dataToSave);
+    res.status(200).json(`Successfully Posted`);
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
