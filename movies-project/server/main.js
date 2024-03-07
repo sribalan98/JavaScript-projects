@@ -11,13 +11,7 @@ dotenv.config();
 const { MONGOOSE, PORT } = process.env;
 const DATABASE_URL = MONGOOSE;
 app.set("trust proxy", true);
-app.use(
-  "/movieland",
-  cors({
-    origin: `http://${ServerIP}:${PORT}`,
-  }),
-  router
-);
+app.use(cors());
 
 mongoose
   .connect(DATABASE_URL)

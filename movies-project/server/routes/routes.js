@@ -13,19 +13,32 @@ router.get("/allMovies", async (req, res) => {
   }
 });
 
+router.get("/check", (req, res) => {
+  res.send("Checked Working");
+});
+
 router.post("/postmovie", async (req, res) => {
+  const {
+    Tittle,
+    Genre,
+    Discription,
+    StreamingPlatforms,
+    Director,
+    Language,
+    MoviePosters,
+  } = req.body;
   try {
     const data = new MoviePostModel({
-      Tittle: req.body.Tittle,
-      Genre: req.body.Genre,
-      Discription: req.body.Discription,
-      Language: req.body.Language,
-      Director: req.body.Director,
-      MoviePosters: req.body.MoviePosters,
-      StreamingPlatforms: req.body.StreamingPlatforms,
+      Tittle,
+      Genre,
+      Discription,
+      Language,
+      StreamingPlatforms,
+      Director,
+      MoviePosters,
     });
     const dataToSave = await data.save();
-    res.status(200).json(dataToSave);
+    res.status(201).json(dataToSave);
   } catch (error) {
     res.status(400).json({ message: error.message });
   }

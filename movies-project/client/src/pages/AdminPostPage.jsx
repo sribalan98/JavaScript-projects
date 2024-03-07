@@ -24,8 +24,32 @@ const AdminPostPage = () => {
     );
   });
 
-  const splitAndTrim = (str) => str.split(",").map((item) => item.trim());
+  const PostData = async (data) => {
+    try {
+      const response = await fetch(
+        "http://192.168.1.2:3080/movieland/postmovie",
+        {
+          method: "POST",
+          body: JSON.stringify(data),
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      console.log(result);
+    } catch (error) {
+      console.error("Error posting data:", error);
+    }
+  };
+
+  const splitAndTrim = (str) => str.split(",").map((item) => item.trim());
   const onSubmit = (data) => {
     const RecivedData = {
       Tittle: data.Tittle,
@@ -36,7 +60,7 @@ const AdminPostPage = () => {
       MoviePosters: data.MoviePosters,
       StreamingPlatforms: splitAndTrim(data.StreamingPlatforms),
     };
-
+    PostData(RecivedData);
     console.log(RecivedData);
   };
 
