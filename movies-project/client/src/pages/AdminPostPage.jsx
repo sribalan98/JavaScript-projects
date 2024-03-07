@@ -1,6 +1,8 @@
 import AdminPostInput from "../componets/AdminPostInput";
 import inputFields from "../dataConditions/InputFields";
 import { useForm } from "react-hook-form";
+import { ToastContainer, toast, Bounce } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const AdminPostPage = () => {
   const {
     register,
@@ -43,7 +45,19 @@ const AdminPostPage = () => {
       }
 
       const result = await response.json();
+      toast.success("Successfully Posted in Server", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+      });
       console.log(result);
+
       reset();
     } catch (error) {
       console.error("Error posting data:", error);
@@ -61,6 +75,7 @@ const AdminPostPage = () => {
       MoviePosters: data.MoviePosters,
       StreamingPlatforms: splitAndTrim(data.StreamingPlatforms),
     };
+
     PostData(RecivedData);
     // console.log(RecivedData);
   };
@@ -82,6 +97,7 @@ const AdminPostPage = () => {
           />
         </div>
       </form>
+      <ToastContainer />
     </div>
   );
 };

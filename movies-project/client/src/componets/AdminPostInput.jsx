@@ -24,6 +24,7 @@ const AdminPostInput = ({
         name={name}
         {...register(id, validation)}
       />
+
       {errors && <span className="text-red-600">{errors.message}</span>}
     </div>
   );
