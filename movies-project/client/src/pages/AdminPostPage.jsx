@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import SearchInput from "../componets/SearchInput";
+import { useState } from "react";
 
 const AdminPostPage = () => {
   const {
@@ -12,6 +13,16 @@ const AdminPostPage = () => {
     formState: { errors },
     reset,
   } = useForm();
+
+  const [SearchVal, SetSearchVal] = useState("");
+  const SearchOnClick = () => {
+    console.log(SearchVal);
+  };
+
+  const handleInputChange = (e) => {
+    SetSearchVal(e.target.value);
+  };
+
   const renderedInputs = inputFields.map((value, index) => {
     return (
       <AdminPostInput
@@ -84,10 +95,11 @@ const AdminPostPage = () => {
 
   return (
     <div className="bg-slate-800 min-h-screen flex items-center flex-col justify-center">
-      <h1 className="text-4xl font-semibold text-white font-protestRevolution">
-        Movieland
-      </h1>
-      <SearchInput value={SearchVal} SearchOnClick={SearchOnClick} />
+      <SearchInput
+        value={SearchVal}
+        SearchOnClick={SearchOnClick}
+        onChange={handleInputChange}
+      />
       <form
         className="w-1/2 grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-gray-400 rounded-lg"
         onSubmit={handleSubmit(onSubmit)}
