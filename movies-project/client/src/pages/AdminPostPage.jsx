@@ -14,15 +14,6 @@ const AdminPostPage = () => {
     reset,
   } = useForm();
 
-  const [SearchVal, SetSearchVal] = useState("");
-  const SearchOnClick = () => {
-    console.log(SearchVal);
-  };
-
-  const handleInputChange = (e) => {
-    SetSearchVal(e.target.value);
-  };
-
   const renderedInputs = inputFields.map((value, index) => {
     return (
       <AdminPostInput
@@ -42,7 +33,7 @@ const AdminPostPage = () => {
   const PostData = async (data) => {
     try {
       const response = await fetch(
-        "http://192.168.1.2:3080/movieland/postmovie",
+        "http://localhost:3080/movieland/postmovie",
         {
           method: "POST",
           body: JSON.stringify(data),
@@ -86,15 +77,50 @@ const AdminPostPage = () => {
       Language: splitAndTrim(data.Language),
       Director: splitAndTrim(data.Director),
       MoviePosters: data.MoviePosters,
-      StreamingPlatforms: splitAndTrim(data.StreamingPlatforms),
+      // StreamingPlatforms: splitAndTrim(data.StreamingPlatforms),
     };
 
     PostData(RecivedData);
     // console.log(RecivedData);
   };
 
+  const SearchData$ViaPOST = async (data) => {
+    try {
+      const response = await fetch(
+        "http://localhost:3080/movieland/adminSearch",
+        {
+          method: "POST",
+          body: JSON.stringify({ name: data }),
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      const result = await response.json();
+      console.log(result);
+    } catch (error) {
+      console.error("Error Searching data:", error);
+    }
+  };
+
+  const [SearchVal, SetSearchVal] = useState("");
+  const SearchOnClick = async () => {
+    console.log(SearchVal);
+    await SearchData$ViaPOST(SearchVal);
+  };
+
+  const handleInputChange = (e) => {
+    SetSearchVal(e.target.value);
+  };
   return (
     <div className="bg-slate-800 min-h-screen flex items-center flex-col justify-center">
+      <h1 className="text-4xl font-semibold text-white font-protestRevolution">
+        Movieland
+      </h1>
       <SearchInput
         value={SearchVal}
         SearchOnClick={SearchOnClick}

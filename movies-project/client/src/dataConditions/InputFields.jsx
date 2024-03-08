@@ -15,10 +15,10 @@ const inputFields = [
   },
 
   {
-    id: "Discription",
-    label: "Discription",
+    id: "Description",
+    label: "Description",
     type: "text",
-    placeholder: "discription about movie",
+    placeholder: "description about movie",
     validation: { required: "Field is required" },
   },
   {
@@ -29,13 +29,13 @@ const inputFields = [
     validation: { required: "Field is required" },
   },
 
-  {
-    id: "StreamingPlatforms",
-    label: "StreamingPlatforms",
-    type: "text",
-    placeholder: "AmazonPrime,HotStar,Netflix...",
-    validation: { required: "Field is required" },
-  },
+  // {
+  //   id: "StreamingPlatforms",
+  //   label: "StreamingPlatforms",
+  //   type: "text",
+  //   placeholder: "AmazonPrime,HotStar,Netflix...",
+  //   validation: { required: "Field is required" },
+  // },
   {
     id: "Director",
     label: "Director",

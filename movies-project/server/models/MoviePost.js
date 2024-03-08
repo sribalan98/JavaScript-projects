@@ -26,10 +26,10 @@ const MoviePostSchema = new mongoose.Schema({
     required: true,
     type: String,
   },
-  StreamingPlatforms: {
-    required: true,
-    type: Array,
-  },
+  // StreamingPlatforms: {
+  //   required: true,
+  //   type: Array,
+  // },
 });
 
 module.exports = mongoose.model("MoviePost", MoviePostSchema);
