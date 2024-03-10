@@ -9,12 +9,11 @@ const MoviePostSchema = new mongoose.Schema({
     required: true,
     type: Array,
   },
-
-  Discription: {
+  Description: {
     required: true,
     type: String,
   },
-  Language: {
+  Duration: {
     required: true,
     type: Array,
   },
@@ -26,10 +25,14 @@ const MoviePostSchema = new mongoose.Schema({
     required: true,
     type: String,
   },
-  // StreamingPlatforms: {
-  //   required: true,
-  //   type: Array,
-  // },
+  Rating: {
+    required: true,
+    type: Number,
+  },
+  ReleaseDate: {
+    required: true,
+    type: Object,
+  },
 });
 
 module.exports = mongoose.model("MoviePost", MoviePostSchema);

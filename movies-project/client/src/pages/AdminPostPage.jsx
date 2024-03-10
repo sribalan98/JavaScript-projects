@@ -12,6 +12,7 @@ const AdminPostPage = () => {
     handleSubmit,
     formState: { errors },
     reset,
+    setValue,
   } = useForm();
 
   const renderedInputs = inputFields.map((value, index) => {
@@ -33,7 +34,7 @@ const AdminPostPage = () => {
   const PostData = async (data) => {
     try {
       const response = await fetch(
-        "http://localhost:3080/movieland/postmovie",
+        "http://192.168.1.2:3080/movieland/postmovie",
         {
           method: "POST",
           body: JSON.stringify(data),
@@ -65,22 +66,39 @@ const AdminPostPage = () => {
       reset();
     } catch (error) {
       console.error("Error posting data:", error);
+      ("Error on Posting Data Check Duplicate Entry ");
+      toast.error(error.message, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+      });
     }
   };
 
   const splitAndTrim = (str) => str.split(",").map((item) => item.trim());
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     const RecivedData = {
       Tittle: data.Tittle,
       Genre: splitAndTrim(data.Genre),
-      Discription: data.Discription,
-      Language: splitAndTrim(data.Language),
+      Description: data.Description,
+      Duration: splitAndTrim(data.Duration),
       Director: splitAndTrim(data.Director),
       MoviePosters: data.MoviePosters,
-      // StreamingPlatforms: splitAndTrim(data.StreamingPlatforms),
+      Rating: data.Rating,
+      ReleaseDate: {
+        year: Number(data.ReleaseDate.split("-")[0]),
+        month: Number(data.ReleaseDate.split("-")[1]),
+        date: Number(data.ReleaseDate.split("-")[2]),
+      },
     };
 
-    PostData(RecivedData);
+    await PostData(RecivedData);
     // console.log(RecivedData);
   };
 
@@ -90,7 +108,7 @@ const AdminPostPage = () => {
         "http://localhost:3080/movieland/adminSearch",
         {
           method: "POST",
-          body: JSON.stringify({ name: data }),
+          body: JSON.stringify({ SearchID: data }),
           mode: "cors",
           headers: {
             "Content-Type": "application/json",
@@ -102,6 +120,7 @@ const AdminPostPage = () => {
       }
       const result = await response.json();
       console.log(result);
+      return result;
     } catch (error) {
       console.error("Error Searching data:", error);
     }
@@ -110,7 +129,26 @@ const AdminPostPage = () => {
   const [SearchVal, SetSearchVal] = useState("");
   const SearchOnClick = async () => {
     console.log(SearchVal);
-    await SearchData$ViaPOST(SearchVal);
+    const { imbd$data } = await SearchData$ViaPOST(SearchVal);
+
+    const fields = {
+      Tittle: imbd$data.name,
+      Genre: imbd$data.genre.join(", "),
+      Description: imbd$data.description,
+      Duration: imbd$data.durationArray.join(", "),
+      Director: imbd$data.directorName.join(", "),
+      MoviePosters: imbd$data.poster,
+      Rating: imbd$data.ratingValue,
+      ReleaseDate: imbd$data.dateArray.join("-"),
+    };
+
+    // for (let key in fields) {
+    //   setValue(key, fields[key]);
+    // }
+
+    Object.keys(fields).map((key) => {
+      setValue(key, fields[key]);
+    });
   };
 
   const handleInputChange = (e) => {

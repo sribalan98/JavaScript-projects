@@ -22,20 +22,12 @@ const inputFields = [
     validation: { required: "Field is required" },
   },
   {
-    id: "Language",
-    label: "Language",
+    id: "Rating",
+    label: "Rating",
     type: "text",
-    placeholder: "MovieLanguage",
+    placeholder: "7.2",
     validation: { required: "Field is required" },
   },
-
-  // {
-  //   id: "StreamingPlatforms",
-  //   label: "StreamingPlatforms",
-  //   type: "text",
-  //   placeholder: "AmazonPrime,HotStar,Netflix...",
-  //   validation: { required: "Field is required" },
-  // },
   {
     id: "Director",
     label: "Director",
@@ -48,6 +40,20 @@ const inputFields = [
     label: "MoviePosters",
     type: "text",
     placeholder: "Image url link",
+    validation: { required: "Field is required" },
+  },
+  {
+    id: "Duration",
+    label: "Duration",
+    type: "text",
+    placeholder: "00H00M",
+    validation: { required: "Field is required" },
+  },
+  {
+    id: "ReleaseDate",
+    label: "ReleaseDate",
+    type: "text",
+    placeholder: "yyyy-mm-dd",
     validation: { required: "Field is required" },
   },
 ];
