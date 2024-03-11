@@ -1,7 +1,13 @@
 /* eslint-disable no-constant-condition */
 
+import MovieCard from "../componets/MovieCard";
+
 const HomePage = () => {
-  return <></>;
+  return (
+    <>
+      <MovieCard />
+    </>
+  );
 };
 
 export default HomePage;
