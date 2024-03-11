@@ -1,7 +1,5 @@
+import "../css/CardMovie.css";
 const MovieCard = () => {
-  /**
-   * Paste one or more documents here
-   */
   const obj = {
     Tittle: "Asuran",
     Genre: ["Action", "Drama"],
@@ -21,17 +19,32 @@ const MovieCard = () => {
   };
   return (
     <>
-      <div className="card">
-        <div className="card-inner">
-          <div className="card-front">
-            <img src={obj.MoviePosters} className="object-cover" />
+      <div className="card w-72 h-96">
+        <div className="card-inner relative w-full h-full">
+          <div className="card-front absolute w-full h-full backface-invisible object-cover transform rotate-y-0 flex items-center justify-center">
+            <img src={obj.MoviePosters} alt={obj.Tittle} />
           </div>
-          <div className="card-back">
+          <div className="card-back absolute w-full h-full backface-invisible bg-nore-blue p-3">
             <div>
-              <h1>{obj.Tittle}</h1>
+              <h1 className="text-white font-roboto">Movie : {obj.Tittle}</h1>
             </div>
             <div>
-              <p className="text-[15px]">{obj.Description}</p>
+              <p className="text-[15px] text-white font-roboto">
+                StoryPlot : {obj.Description}
+              </p>
+              <div className="mt-2">
+                {obj.Genre.map((v, i) => (
+                  <span
+                    className="text-nore-blue bg-white rounded-lg px-2 mx-1"
+                    key={i}
+                  >
+                    {v}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h2>Rating : {obj.Rating}</h2>
             </div>
           </div>
         </div>

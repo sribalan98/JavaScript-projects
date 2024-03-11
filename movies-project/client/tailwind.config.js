@@ -4,10 +4,12 @@ export default {
   theme: {
     fontFamily: {
       protestRevolution: ["Protest Revolution"],
+      roboto: ["Roboto"],
     },
     extend: {
       colors: {
         "dark-blue": "#0c115f",
+        "nore-blue": "#0a1d3d",
         "hightlight-yellow": " #feff4b",
       },
     },
