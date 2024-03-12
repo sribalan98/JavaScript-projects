@@ -5,10 +5,10 @@ import MovieSelectorNav from "../componets/MovieSelectorNav";
 
 const HomePage = () => {
   return (
-    <frameElement className="flex flex-col items-center bg-Container">
+    <div className="flex flex-col items-center bg-Container">
       <MovieSelectorNav />
       <AllMovies />
-    </frameElement>
+    </div>
   );
 };
 

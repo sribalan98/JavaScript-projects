@@ -9,10 +9,10 @@ const AllMovies = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:3080/movieland/allMovies"
+          "http://localhost:3080/movieland/allmovies"
         );
         const data = await response.json();
-
+        console.log(data);
         setAllMoviesData(data);
       } catch (error) {
         console.error("Error fetching movies:", error);

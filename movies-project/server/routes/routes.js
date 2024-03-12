@@ -6,7 +6,7 @@ router.use(express.urlencoded({ extended: true }));
 
 router.get("/allMovies", async (req, res) => {
   try {
-    const data = await MoviePostModel.find();
+    const data = await MoviePostModel.find({});
     const shuffleArray = (array) => {
       const newArray = [...array];
       for (let i = newArray.length - 1; i > 0; i--) {
@@ -16,6 +16,7 @@ router.get("/allMovies", async (req, res) => {
       return newArray;
     };
     res.json(shuffleArray(data));
+    // console.log(data);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
