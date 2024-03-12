@@ -1,12 +1,14 @@
 /* eslint-disable no-constant-condition */
 
-import MovieCard from "../componets/MovieCard";
+import AllMovies from "../componets/AllMovies";
+import MovieSelectorNav from "../componets/MovieSelectorNav";
 
 const HomePage = () => {
   return (
-    <>
-      <MovieCard />
-    </>
+    <frameElement className="flex flex-col items-center bg-Container">
+      <MovieSelectorNav />
+      <AllMovies />
+    </frameElement>
   );
 };
 

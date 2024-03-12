@@ -1,12 +1,14 @@
 import movieland from "../assets/movieland.png";
 import { BsFillSearchHeartFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
-const NavBar = (props) => {
-  const { NC } = props;
+
+const NavBar = () => {
+  const LiClassNames =
+    "bg-hightlight-yellow text-dark-blue rounded-md px-4 py-2 font-semibold text-4";
+
   return (
     <>
-      <nav className="w-full h-[5rem] bg-dark-blue flex items-center justify-between sticky top-0">
+      <nav className="w-full h-[5rem] bg-dark-blue flex items-center justify-between  top-0 ">
         <div
           id="Logo-Container"
           className="w-20 h-full ml-8 flex items-center gap-4 "
@@ -18,7 +20,7 @@ const NavBar = (props) => {
         </div>
         <ul className="flex gap-6 mr-5 justify-center items-center">
           <li>
-            <Link className={NC} to="/">
+            <Link className={LiClassNames} to="/">
               Home
             </Link>
           </li>
@@ -34,17 +36,12 @@ const NavBar = (props) => {
             </div>
           </li>
           <li>
-            <Link className={NC}>Support</Link>
+            <Link className={LiClassNames}>Support</Link>
           </li>
         </ul>
       </nav>
     </>
   );
 };
-NavBar.propTypes = {
-  NC: PropTypes.string,
-  LC: PropTypes.string,
-  HLC: PropTypes.func,
-  ISV: PropTypes.bool,
-};
+
 export default NavBar;
