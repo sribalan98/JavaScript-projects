@@ -45,11 +45,12 @@ const AdminPostPage = () => {
         }
       );
 
+      const result = await response.json();
       if (!response.ok) {
+        // Handle server-side errors
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
 
-      const result = await response.json();
       toast.success("Successfully Posted in Server", {
         position: "top-right",
         autoClose: 5000,
@@ -66,7 +67,24 @@ const AdminPostPage = () => {
       reset();
     } catch (error) {
       console.error("Error posting data:", error);
-      ("Error on Posting Data Check Duplicate Entry ");
+
+      // if (
+      //   error.response &&
+      //   error.response.data &&
+      //   error.response.data.duplicateTitle
+      // ) {
+      //   toast.error("Error on Posting Data Check Duplicate Entry ", {
+      //     position: "top-right",
+      //     autoClose: 5000,
+      //     hideProgressBar: false,
+      //     closeOnClick: true,
+      //     pauseOnHover: true,
+      //     draggable: true,
+      //     progress: undefined,
+      //     theme: "dark",
+      //     transition: Bounce,
+      //   });
+      // }
       toast.error(error.message, {
         position: "top-right",
         autoClose: 5000,

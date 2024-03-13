@@ -1,5 +1,4 @@
 import movieland from "../assets/movieland.png";
-import { BsFillSearchHeartFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
@@ -19,25 +18,21 @@ const NavBar = () => {
           </h3>
         </div>
         <ul className="flex gap-6 mr-5 justify-center items-center">
-          <li>
-            <Link className={LiClassNames} to="/">
-              Home
-            </Link>
-          </li>
-          <li>
-            <div className="flex justify-center items-center">
-              <input
-                type="text"
-                className="h-8 outline-none px-2 font-semibold"
-              />
-              <button className="bg-hightlight-yellow text-dark-blue rounded-tr-lg rounded-br-lg px-4 py-2  ">
-                <BsFillSearchHeartFill />
-              </button>
-            </div>
-          </li>
-          <li>
-            <Link className={LiClassNames}>Support</Link>
-          </li>
+          <Link className={LiClassNames} to="/">
+            <li>Home</li>
+          </Link>
+          <Link className={LiClassNames} to="top-rated-movie">
+            <li>Top Rated</li>
+          </Link>
+          <Link className={LiClassNames} to="">
+            <li>Recent Release</li>
+          </Link>
+          <Link className={LiClassNames} to="">
+            <li>Old Movies</li>
+          </Link>
+          <Link className={LiClassNames}>
+            <li>❤️Support❤️</li>
+          </Link>
         </ul>
       </nav>
     </>

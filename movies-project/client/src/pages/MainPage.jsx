@@ -5,8 +5,10 @@ import NavBar from "../componets/NavBar";
 const MainPage = () => {
   return (
     <>
-      <NavBar />
-      <Outlet />
+      <div className="bg-Container ">
+        <NavBar />
+        <Outlet />
+      </div>
     </>
   );
 };

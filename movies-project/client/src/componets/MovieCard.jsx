@@ -55,7 +55,9 @@ const MovieCard = ({
           >
             {tittle}
           </h1>
-          <h2 className={`${fontSizeClass} text-white font-roboto font-thin`}>
+          <h2
+            className={`${fontSizeClass} text-white font-roboto font-semi-bold`}
+          >
             <span className="font-bold">StoryPlot : </span>
             {description}
           </h2>
