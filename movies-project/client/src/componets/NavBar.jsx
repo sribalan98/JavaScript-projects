@@ -30,7 +30,7 @@ const NavBar = () => {
           <Link className={LiClassNames} to="">
             <li>Old Movies</li>
           </Link>
-          <Link className={LiClassNames}>
+          <Link className={LiClassNames} to="/support-page">
             <li>❤️Support❤️</li>
           </Link>
         </ul>
