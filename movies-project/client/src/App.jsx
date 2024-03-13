@@ -12,8 +12,8 @@ export default function App() {
         <Route path="/" element={<MainPage />}>
           <Route index element={<HomePage />} />
           <Route path="/top-rated-movie" element={<TopRatedPage />} />
-          <Route path="/support-page" element={<SupportPage />} />
         </Route>
+        <Route path="/support-page" element={<SupportPage />} />
         <Route path="/postmovie" element={<AdminPostPage />} />
       </Routes>
     </BrowserRouter>
